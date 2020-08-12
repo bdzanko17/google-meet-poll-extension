@@ -1,7 +1,23 @@
-.benga{
-	left:0;
-	position:absolute;
-	top: 88px;
-	z-index:99;
-	
+.benga {
+  left: 0;
+  position: absolute;
+  top: 88px;
+  z-index: 99;
 }
+.popup-overlay {
+  visibility: hidden;
+}
+
+.popup-content {
+  visibility: hidden;
+}
+
+.popup-overlay.active {
+	/*displays pop-up when "active" class is present*/
+	visibility: visible;
+	text-align: center;
+  }
+  .popup-content.active {
+	/*Shows pop-up content when "active" class is present */
+	visibility: visible;
+  }

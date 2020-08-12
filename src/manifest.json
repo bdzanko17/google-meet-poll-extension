@@ -17,6 +17,7 @@
 				"css/styles.css"
 			],
 			"js": [
+				"js/jquery-3.5.0.min.js",
 				"js/main.js"
 			],
 			
