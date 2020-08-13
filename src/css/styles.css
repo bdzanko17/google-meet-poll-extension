@@ -21,3 +21,10 @@
 	/*Shows pop-up content when "active" class is present */
 	visibility: visible;
   }
+  
+  .odgovor{
+    visibility: hidden;
+  }
+  .odgovor.active{
+    visibility: visible;
+  }
