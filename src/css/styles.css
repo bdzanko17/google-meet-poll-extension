@@ -17,14 +17,18 @@
 	visibility: visible;
 	text-align: center;
   }
+  
   .popup-content.active {
 	/*Shows pop-up content when "active" class is present */
 	visibility: visible;
   }
   
+
+
   .odgovor{
     visibility: hidden;
   }
+
   .odgovor.active{
     visibility: visible;
   }
