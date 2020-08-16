@@ -1,9 +1,35 @@
 .benga {
-  left: 0;
   position: absolute;
-  top: 88px;
-  z-index: 99;
+  top: 3px;
+  right: 230px;
+  font-size: 14px;
+  z-index: 999;
 }
+
+.open{
+  background-color: lightblue;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+
+.sendbtn {
+  background-color: #4CAF50;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+
+.closebtn {
+  background-color: darkgrey;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+
+.answer {
+  background-color: #4CAF50;
+  box-shadow: 0 3px #666;
+  transform: translateY(4px);
+}
+
 .popup-overlay {
   visibility: hidden;
 }
@@ -15,20 +41,30 @@
 .popup-overlay.active {
 	/*displays pop-up when "active" class is present*/
 	visibility: visible;
-	text-align: center;
+  text-align: center;
   }
   
   .popup-content.active {
 	/*Shows pop-up content when "active" class is present */
-	visibility: visible;
+  visibility: visible;
+  background-color: lightgrey;
+  width: 150px;
+  border: 5px solid grey;
+  padding: 30px;
+  margin: 10px;
+  background-color: lightblue;
   }
   
-
-
   .odgovor{
     visibility: hidden;
   }
 
   .odgovor.active{
     visibility: visible;
+    background-color: lightgrey;
+    width: 150px;
+    border: 5px solid grey;
+    padding: 30px;
+    margin: 10px;
+    background-color: lightblue;
   }
