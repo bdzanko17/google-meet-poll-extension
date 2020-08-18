@@ -47,7 +47,6 @@
   .popup-content.active {
 	/*Shows pop-up content when "active" class is present */
   visibility: visible;
-  background-color: lightgrey;
   width: 150px;
   border: 5px solid grey;
   padding: 30px;
@@ -61,7 +60,20 @@
 
   .odgovor.active{
     visibility: visible;
-    background-color: lightgrey;
+    width: 150px;
+    border: 5px solid grey;
+    padding: 30px;
+    margin: 10px;
+    background-color: lightblue;
+  }
+
+  .rezultati{
+    visibility: hidden;
+  
+  }
+  
+  .rezultati.active{
+    visibility: visible;
     width: 150px;
     border: 5px solid grey;
     padding: 30px;

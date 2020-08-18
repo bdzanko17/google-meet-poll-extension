@@ -24,7 +24,10 @@
       });
     
       socket.on("results", (data) => {
-        console.log(data);
+        $("#ans1").text(data[1]);
+        $("#ans2").text(data[2]);
+        $("#ans3").text(data[3]);
+        $(".rezultati").addClass("active");
       });
     
       var x = document.createElement("P"); // Create a <p> node
@@ -71,6 +74,36 @@
     
       </div>
       `);
+
+      $(".benga").append(`
+      <div class='rezultati'>
+      <h4>Question: </h4>
+      <table style="width:100%">
+      <table>
+      <tr>
+        <th>Answer</th>
+        <th>Votes</th>
+      </tr>
+      <tr>
+        <td>For</td>
+        <td><center><span id="ans1">0</span></center></td>
+      </tr>
+      <tr>
+        <td>Against</td>
+        <td><center><span id="ans2">0</span></center></td>
+      </tr>
+      <tr>
+      <td>Abstain</td>
+      <td><center><span id="ans3">0</span></center></td>
+    </tr>
+    </table>  
+    <br>
+    <button id="CloseRes">Close</button>
+
+    </div>
+
+      `);
+
     
       $(".answers").on("change", function () {
         $(".answers").not(this).prop("checked", false);
@@ -124,6 +157,12 @@
         });
         $(".odgovor").removeClass("active"); //SKRIVANJE ODGOVORA
       });
+
+
+      $("#CloseRes").on("click", function () {
+        $(".rezultati").removeClass("active");
+      });
+
 
     }
     
