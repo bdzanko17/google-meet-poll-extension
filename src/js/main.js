@@ -92,7 +92,8 @@
             "#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.mKBhCf.qwU8Me.RlceJe.kjZr4 > div > div.Bx7THd.PBWx0c.Uy7Qke.XN1AMe > div.ZHdB2e.iy732 > div.fe4pJf.Pdo15c > span.HALYaf.tmIkuc.s2gQvd.KKjvXb > div.TnISae.CnDs7d.hPqowe.crOkHf.B9WI2 > div:nth-child(2) > div > div.fSW6Ze.r14hdb > div:nth-child(3) > div"
           )!=null){
            if( document.querySelector(
-            "#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.mKBhCf.qwU8Me.RlceJe.kjZr4 > div > div.Bx7THd.PBWx0c.Uy7Qke.XN1AMe > div.ZHdB2e.iy732 > div.fe4pJf.Pdo15c > span.HALYaf.tmIkuc.s2gQvd.KKjvXb > div.TnISae.CnDs7d.hPqowe.crOkHf.B9WI2 > div:nth-child(2) > div > div.fSW6Ze.r14hdb > div:nth-child(3) > div").getAttribute("aria-label").includes("Ukloni"))
+            "#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.mKBhCf.qwU8Me.RlceJe.kjZr4 > div > div.Bx7THd.PBWx0c.Uy7Qke.XN1AMe > div.ZHdB2e.iy732 > div.fe4pJf.Pdo15c > span.HALYaf.tmIkuc.s2gQvd.KKjvXb > div.TnISae.CnDs7d.hPqowe.crOkHf.B9WI2 > div:nth-child(2) > div > div.fSW6Ze.r14hdb > div:nth-child(3) > div").getAttribute("aria-label").includes("Ukloni")||document.querySelector(
+              "#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.mKBhCf.qwU8Me.RlceJe.kjZr4 > div > div.Bx7THd.PBWx0c.Uy7Qke.XN1AMe > div.ZHdB2e.iy732 > div.fe4pJf.Pdo15c > span.HALYaf.tmIkuc.s2gQvd.KKjvXb > div.TnISae.CnDs7d.hPqowe.crOkHf.B9WI2 > div:nth-child(2) > div > div.fSW6Ze.r14hdb > div:nth-child(3) > div").getAttribute("aria-label").includes("Remove"))
             organizator=1;
           }
           
@@ -110,7 +111,7 @@
         var question = $(".question").val(); //UZIMANJE PITANJA IZ TEXTBOXA I SLANJE SERVERU DA IMA AKTIVNA ANKETA, NAKON TOGA SERVER ODGOVARA SVIMA DA IMA AKTIVNA ANKETA
         if(organizator)
         socket.emit("vote", question);
-        else alert("YOU ARE NOT A ORGANIZATOR");
+        else alert("You are not an organizer");
         $(".popup-overlay, .popup-content").removeClass("active");
     
       });
