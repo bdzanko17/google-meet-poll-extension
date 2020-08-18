@@ -15,7 +15,7 @@
       clearInterval(y)
  
       //OTVARAM SOCKET ZA REAL TIME PROMJENE
-      var socket = io.connect("http://localhost:3000");
+      var socket = io.connect("https://poll-serverr.herokuapp.com/");
       var organizator=0;
       socket.on("active_poll", (data) => {
         //OSLUŠKIVANJE DA LI IMA AKTIVNE ANKETE, AKO DODJE PORUKA AKTIVNA ANKETA POJAVI SE ONO DA SE ODGOVARA
