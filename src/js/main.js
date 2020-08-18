@@ -10,7 +10,7 @@
 
   //Prikaz samo kada je u call-u, provjera da li je u callu, ako jeste prikazi dugme :) 
   var x =setInterval(() => {
-
+ 
     if(googleMeetCall){
       clearInterval(y)
  
