@@ -1,7 +1,7 @@
 (function () {
 
   var googleMeetCall=0;
-
+  var questionActive;
   var y =setInterval(() => {
     if(document.querySelector('#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.pHsCke > div.Jrb8ue > div')!=null)
     googleMeetCall=1;
@@ -18,12 +18,14 @@
       var socket = io.connect("https://poll-serverr.herokuapp.com/");
       var organizator=0;
       socket.on("active_poll", (data) => {
+        questionActive=data;
         //OSLUŠKIVANJE DA LI IMA AKTIVNE ANKETE, AKO DODJE PORUKA AKTIVNA ANKETA POJAVI SE ONO DA SE ODGOVARA
         $(".odgovor").addClass("active");
         $(".question").html("Question: " + data);
       });
     
       socket.on("results", (data) => {
+        $("#question").text(questionActive);
         $("#ans1").text(data[1]);
         $("#ans2").text(data[2]);
         $("#ans3").text(data[3]);
@@ -77,7 +79,7 @@
 
       $(".benga").append(`
       <div class='rezultati'>
-      <h4>Question: </h4>
+      <h4>Question: <span id="question"></span> </h4>
       <table style="width:100%">
       <table>
       <tr>
