@@ -10,6 +10,12 @@
   background-color: lightblue;
   box-shadow: 0 3px #666;
   transform: translateY(4px);
+
+  position: fixed;
+  top: 15px;
+  right: 385px;
+  font-size: 14px;
+  z-index: 999;
 }
 
 .sendbtn {
@@ -55,7 +61,7 @@
 
   position: fixed;
   top: 40px;
-  right: 300px;
+  right: 330px;
   font-size: 14px;
   z-index: 999;
   }
@@ -74,7 +80,7 @@
 
     position: fixed;
     top: 40px;
-    right: 300px;
+    right: 330px;
     font-size: 14px;
     z-index: 999;
   }
@@ -93,7 +99,7 @@
 
     position: fixed;
     top: 40px;
-    right: 300px;
+    right: 330px;
     font-size: 14px;
     z-index: 999;
   }
