@@ -66,6 +66,7 @@
       <br>
       <input type="checkbox"  class="answers" name="ans" id="checkbox-3" value="3" class="custom"  />
       <label for="checkbox-3">Abstain</label>
+      <br>
       <button class="answer">Send</button>
     
       </div>
