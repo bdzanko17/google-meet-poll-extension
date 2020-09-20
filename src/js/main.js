@@ -2,26 +2,34 @@
 
   var googleMeetCall=0;
   var questionActive;
+   var room=window.location.href;
+
   var y =setInterval(() => {
-    if(document.querySelector('#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.pHsCke > div.Jrb8ue > div')!=null)
+    if(document.querySelector('#ow3 > div.T4LgNb > div > div:nth-child(5) > div.crqnQb > div.pHsCke > div.Jrb8ue > div')!=null)
     googleMeetCall=1;
   }, 1000);
-
 
   //Prikaz samo kada je u call-u, provjera da li je u callu, ako jeste prikazi dugme :) 
   var x =setInterval(() => {
  
     if(googleMeetCall){
-      clearInterval(y)
  
       //OTVARAM SOCKET ZA REAL TIME PROMJENE
-      var socket = io.connect("https://poll-serverr.herokuapp.com/");
+      var socket = io.connect("http://localhost:3000/");
+      socket.emit('join', room);
+
       var organizator=0;
       socket.on("active_poll", (data) => {
         questionActive=data;
         //OSLUŠKIVANJE DA LI IMA AKTIVNE ANKETE, AKO DODJE PORUKA AKTIVNA ANKETA POJAVI SE ONO DA SE ODGOVARA
         $(".odgovor").addClass("active");
         $(".question").html("Question: " + data);
+      });
+
+      socket.on("organizator",()=>{
+        console.log("organizator");
+            organizator=1;
+            alert("You are now organizatorr");
       });
     
       socket.on("results", (data) => {
@@ -53,7 +61,9 @@
       $(".benga").append(`<div class='popup-overlay'> <div class='popup-content'>
         <div class="chat-popup" id="myForm">
           <textarea class="question" placeholder="Type your question.." name="msg" required></textarea>
-          <button class="sendbtn">Send</button>
+          <textarea class="code" placeholder="Code" name="msg" required></textarea>
+          <button class="sendbtn">Send Question</button>
+          <button class="sendbtncode">Send Code</button>
           <button class="closebtn">Close</button>
       </div> 
        </div></div>`);
@@ -112,28 +122,7 @@
       });
     
       $(".open").on("click", function () {
-        $(
-          "#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.pHsCke > div.Jrb8ue > div > div.NzPR9b > div.uArJ5e.UQuaGc.kCyAyd.kW31ib.foXzLb.IeuGXd > div.e19J0b.CeoRYc"
-        ).click();
-        //console.log($("#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.mKBhCf.qwU8Me.RlceJe.kjZr4 > div > div.Bx7THd.PBWx0c.Uy7Qke.XN1AMe > div.ZHdB2e.iy732 > div.fe4pJf.Pdo15c > span.HALYaf.tmIkuc.s2gQvd.KKjvXb > div.TnISae.CnDs7d.hPqowe.crOkHf.B9WI2"));
-    
-        setTimeout(() => {
-          $(
-            "#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.mKBhCf.qwU8Me.RlceJe.kjZr4 > div > div.Bx7THd.PBWx0c.Uy7Qke.XN1AMe > div.ZHdB2e.iy732 > div.fe4pJf.Pdo15c > span.HALYaf.tmIkuc.s2gQvd.KKjvXb > div.TnISae.CnDs7d.hPqowe.crOkHf > div:nth-child(2) > div > div > div.cSO8I.N4cbF > div.KvRaG.BvT0le > div > div.Fvio9d.MbhUzd"
-          ).click();
-        }, 300);
         
-        setTimeout(() => {
-          if(        document.querySelector(
-            "#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.mKBhCf.qwU8Me.RlceJe.kjZr4 > div > div.Bx7THd.PBWx0c.Uy7Qke.XN1AMe > div.ZHdB2e.iy732 > div.fe4pJf.Pdo15c > span.HALYaf.tmIkuc.s2gQvd.KKjvXb > div.TnISae.CnDs7d.hPqowe.crOkHf.B9WI2 > div:nth-child(2) > div > div.fSW6Ze.r14hdb > div:nth-child(3) > div"
-          )!=null){
-           if( document.querySelector(
-            "#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.mKBhCf.qwU8Me.RlceJe.kjZr4 > div > div.Bx7THd.PBWx0c.Uy7Qke.XN1AMe > div.ZHdB2e.iy732 > div.fe4pJf.Pdo15c > span.HALYaf.tmIkuc.s2gQvd.KKjvXb > div.TnISae.CnDs7d.hPqowe.crOkHf.B9WI2 > div:nth-child(2) > div > div.fSW6Ze.r14hdb > div:nth-child(3) > div").getAttribute("aria-label").includes("Ukloni")||document.querySelector(
-              "#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.mKBhCf.qwU8Me.RlceJe.kjZr4 > div > div.Bx7THd.PBWx0c.Uy7Qke.XN1AMe > div.ZHdB2e.iy732 > div.fe4pJf.Pdo15c > span.HALYaf.tmIkuc.s2gQvd.KKjvXb > div.TnISae.CnDs7d.hPqowe.crOkHf.B9WI2 > div:nth-child(2) > div > div.fSW6Ze.r14hdb > div:nth-child(3) > div").getAttribute("aria-label").includes("Remove"))
-            organizator=1;
-          }
-          
-        }, 800);
         $(".popup-overlay, .popup-content").addClass("active");
       });
     
@@ -144,18 +133,26 @@
     
       //SLANJE POLL-a
       $(".sendbtn").on("click", function () {
-        var question = $(".question").val(); //UZIMANJE PITANJA IZ TEXTBOXA I SLANJE SERVERU DA IMA AKTIVNA ANKETA, NAKON TOGA SERVER ODGOVARA SVIMA DA IMA AKTIVNA ANKETA
+        var data = $(".question").val(); //UZIMANJE PITANJA IZ TEXTBOXA I SLANJE SERVERU DA IMA AKTIVNA ANKETA, NAKON TOGA SERVER ODGOVARA SVIMA DA IMA AKTIVNA ANKETA
+        var code = $(".code").val();
+
         if(organizator)
-        socket.emit("vote", question);
+        socket.emit("vote", {room,data,code});
         else alert("You are not an organizer");
         $(".popup-overlay, .popup-content").removeClass("active");
     
       });
+
+      $(".sendbtncode").on("click", function () {
+        var codee = $(".code").val();
+        socket.emit("code",codee);
+          });
     
       //SLANJE ODGOVORA
       $(".answer").on("click", function () {
         $('input[name="ans"]:checked').each(function () {
-          socket.emit("votes", this.value); //SLANJE ODGOVORA NA SERVER, SVAKO MOZE SAMO JEDNOM POSLAT ODGOVOR
+          var answer=this.value;
+          socket.emit("votes", answer); //SLANJE ODGOVORA NA SERVER, SVAKO MOZE SAMO JEDNOM POSLAT ODGOVOR
         });
         $(".odgovor").removeClass("active"); //SKRIVANJE ODGOVORA
       });

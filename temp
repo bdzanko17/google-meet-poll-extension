@@ -1,0 +1,4 @@
+  var y =setInterval(() => {
+    if(document.querySelector('#ow3 > div.T4LgNb > div > div:nth-child(4) > div.crqnQb > div.pHsCke > div.Jrb8ue > div > div.NzPR9b')!=null)
+    googleMeetCall=1;
+  }, 1000);
