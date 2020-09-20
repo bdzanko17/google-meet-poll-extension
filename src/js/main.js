@@ -15,7 +15,7 @@
     if(googleMeetCall){
  
       //OTVARAM SOCKET ZA REAL TIME PROMJENE
-      var socket = io.connect("http://localhost:3000/");
+      var socket = io.connect("https://poll-serverr.herokuapp.com/");
       socket.emit('join', room);
 
       var organizator=0;
