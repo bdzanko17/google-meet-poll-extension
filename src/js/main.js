@@ -65,7 +65,6 @@
       //var t = document.createTextNode("Ask a question!");
       var button = document.createElement("BUTTON"); // Create a text node
       button.className = "open";
-      button.innerHTML = "ASK A QUESTION";
       //x.appendChild(t);
       // Append the text to <p>
       x.appendChild(button);
