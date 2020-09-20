@@ -1,39 +1,86 @@
 .benga {
   position: fixed;
   top: 3px;
-  right: 100px;
+  right: 300px;
   font-size: 14px;
   z-index: 999;
 }
 
 .open{
-  background-color: lightblue;
-  box-shadow: 0 3px #666;
-  transform: translateY(4px);
+  background-image: url("https://i.ibb.co/0nNSJXT/Naslovna.png");
+  background-position-x: center;
+  background-position-y: center;
+  background-color: transparent;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 
   position: fixed;
-  top: 15px;
-  right: 385px;
+  top: 0px;
+  right: 350px;
   font-size: 14px;
   z-index: 999;
+
 }
 
 .sendbtn {
-  background-color: #4CAF50;
-  box-shadow: 0 3px #666;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  font-family: 'Roboto';
   transform: translateY(4px);
+  border-radius: 15px;
+}
+
+.sendbtn:hover {
+  background-color: #4CAF50;
+  color: white;
+  font-family: 'Roboto';
 }
 
 .closebtn {
-  background-color: darkgrey;
-  box-shadow: 0 3px #666;
+  background-color: white; 
+  color: black; 
+  font-family: 'Roboto';
+  border: 2px solid #aaaaaa;
   transform: translateY(4px);
+  border-radius: 15px;
+}
+
+.closebtn:hover {
+  background-color: #aaaaaa;
+  color: white;
+  font-family: 'Roboto';
 }
 
 .answer {
-  background-color: #4CAF50;
-  box-shadow: 0 3px #666;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
   transform: translateY(4px);
+  border-radius: 15px;
+  font-family: 'Roboto';
+}
+
+.answer:hover {
+  background-color: #4CAF50;
+  color: white;
+  font-family: 'Roboto';
+}
+
+.CloseRes {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #aaaaaa;
+  transform: translateY(4px);
+  border-radius: 15px;
+  font-family: 'Roboto';
+}
+
+.CloseRes:hover {
+  background-color: #aaaaaa;
+  color: white;
 }
 
 .popup-overlay {
@@ -55,16 +102,19 @@
   visibility: visible;
   width: 150px;
   border: 5px solid grey;
+  font-family: 'Roboto';
   padding: 30px;
   margin: 10px;
-  background-color: lightblue;
+  background-color: whitesmoke;
+  border-radius: 15px;
 
   position: fixed;
   top: 40px;
-  right: 330px;
+  right: 340px;
   font-size: 14px;
   z-index: 999;
   }
+
   
   .odgovor{
     visibility: hidden;
@@ -76,11 +126,13 @@
     border: 5px solid grey;
     padding: 30px;
     margin: 10px;
-    background-color: lightblue;
+    background-color: whitesmoke;
+    font-family: 'Roboto';
+    border-radius: 15px;
 
     position: fixed;
     top: 40px;
-    right: 330px;
+    right: 340px;
     font-size: 14px;
     z-index: 999;
   }
@@ -95,13 +147,17 @@
     border: 5px solid grey;
     padding: 35px;
     margin: 10px;
-    background-color: lightblue;
+    background-color: whitesmoke;
+    font-family: 'Roboto';
+    border-radius: 15px;
 
     position: fixed;
     top: 40px;
-    right: 330px;
+    right: 340px;
     font-size: 14px;
     z-index: 999;
   }
+
+  
 
  
