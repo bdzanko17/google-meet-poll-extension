@@ -6,8 +6,7 @@
   var y = setInterval(() => {
     if (
       document.querySelector(
-        "#ow3 > div.T4LgNb > div > div:nth-child(5) > div.crqnQb > div.rG0ybd.LCXT6 > div.f0WtFf > div.M5zXed > div > span > span > span"
-      ) != null
+        "#ow3 > div.T4LgNb > div > div:nth-child(5) > div.crqnQb > div.pHsCke") != null
     ) {
       googleMeetCall = 1;
       room = window.location.href;
