@@ -75,8 +75,9 @@
           <textarea class="question" placeholder="Type your question.." name="msg" required></textarea>
           <textarea class="code" placeholder="Code" name="msg" required></textarea>
           <button class="sendbtn">Send Question</button>
-          <button class="sendbtncode">Send Code</button>
           <button class="closebtn">Close</button>
+          <button class="sendbtncode">Send Code</button>
+          
       </div> 
        </div></div>`);
 
@@ -141,6 +142,7 @@
         $(".popup-overlay, .popup-content").removeClass("active");
       });
 
+
       //SLANJE POLL-a
       $(".sendbtn").on("click", function () {
         var data = $(".question").val(); //UZIMANJE PITANJA IZ TEXTBOXA I SLANJE SERVERU DA IMA AKTIVNA ANKETA, NAKON TOGA SERVER ODGOVARA SVIMA DA IMA AKTIVNA ANKETA
@@ -151,10 +153,12 @@
         $(".popup-overlay, .popup-content").removeClass("active");
       });
 
+      
       $(".sendbtncode").on("click", function () {
         var codee = $(".code").val();
         socket.emit("code", codee);
       });
+
 
       //SLANJE ODGOVORA
       $(".answer").on("click", function () {
