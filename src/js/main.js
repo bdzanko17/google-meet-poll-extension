@@ -10,6 +10,7 @@
     ) {
       googleMeetCall = 1;
       room = window.location.href;
+      console.log(room);
       var x = 0;
       for (var i = 0; i < room.length; i++) {
         if (room.charAt(i) === "?") 
@@ -44,10 +45,15 @@
         $(".question").html("Question: " + data);
       });
 
-      socket.on("organizator", () => {
-        console.log("organizator");
-        organizator = 1;
-        alert("You are now organizatorr");
+      socket.on("organizator", (data) => {
+        console.log(data);
+        if(data){
+          organizator=1;
+          alert("You are now organizator");
+        }
+        else
+        alert("Wrong code, or some another problem");
+
       });
 
       socket.on("results", (data) => {
@@ -155,8 +161,12 @@
 
       
       $(".sendbtncode").on("click", function () {
-        var codee = $(".code").val();
-        socket.emit("code", codee);
+        if(!organizator){
+          var codee = $(".code").val();
+          socket.emit("code", codee,room);
+        }else{
+          alert("You are already organizer")
+        }
       });
 
 
