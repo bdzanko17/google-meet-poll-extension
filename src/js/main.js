@@ -49,8 +49,8 @@
         console.log(data);
         if(data){
           organizator=1;
-          alert("You are now organizator");
-        }
+          alert("You are now an organizer");
+                }
         else
         alert("Wrong code, or some another problem");
 
@@ -79,10 +79,10 @@
         .append(`<div class='popup-overlay'> <div class='popup-content'>
         <div class="chat-popup" id="myForm">
           <textarea class="question" placeholder="Type your question.." name="msg" required></textarea>
-          <textarea class="code" placeholder="Code" name="msg" required></textarea>
+          <textarea class="code" placeholder="Code for admin privileges" name="msg" required></textarea>
           <button class="sendbtn">Send Question</button>
           <button class="closebtn">Close</button>
-          <button class="sendbtncode">Send Code</button>
+          <button class="sendbtncode">Get privileges</button>
           
       </div> 
        </div></div>`);
