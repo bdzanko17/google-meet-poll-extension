@@ -52,7 +52,7 @@
           alert("You are now an organizer");
                 }
         else
-        alert("Wrong code, or some another problem");
+        alert("Wrong code,  or some another problem");
 
       });
 
