@@ -7,7 +7,10 @@
     if (
       document.querySelector(
         "#ow3 > div.T4LgNb > div > div:nth-child(7) > div.crqnQb > div.rG0ybd.LCXT6 > div.q2u11 > div.s1GInc.zCbbgf > div > span") != null
-    ) {
+    || document.querySelector(
+      "#ow3 > div.T4LgNb > div > div:nth-child(7) > div.crqnQb > div.rG0ybd.LCXT6 > div.jzP6rf > div.gSlHI > div > span > span") != null
+      ||document.querySelector(
+        "#ow3 > div.T4LgNb > div > div:nth-child(7) > div.crqnQb > div.pHsCke > div.Jrb8ue > div > div.NzPR9b > span > div.MQKmmc.SudKRc.L7osyb.wYNW7d > span:nth-child(1)") != null) {
       googleMeetCall = 1;
       room = window.location.href;
       console.log(room);
