@@ -3,7 +3,7 @@
   "description": "A simple poll extension for google-meet",
   "permissions": ["storage"],
   "manifest_version": 2,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Beste-Leben",
   "background": {
     "scripts": [ "js/background.js"]
