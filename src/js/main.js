@@ -6,11 +6,11 @@
   var y = setInterval(() => {
     if (
       document.querySelector(
-        "#ow3 > div.T4LgNb > div > div:nth-child(7) > div.crqnQb > div.rG0ybd.LCXT6 > div.q2u11 > div.s1GInc.zCbbgf > div > span") != null
+        "#ow3 > div.T4LgNb > div > div:nth-child(8) > div.crqnQb > div.rG0ybd.LCXT6 > div.jzP6rf") != null
     || document.querySelector(
-      "#ow3 > div.T4LgNb > div > div:nth-child(7) > div.crqnQb > div.rG0ybd.LCXT6 > div.jzP6rf > div.gSlHI > div > span > span") != null
+      "#ow3 > div.T4LgNb > div > div:nth-child(8) > div.crqnQb > div.pHsCke > div.Jrb8ue > div > div.NzPR9b > div:nth-child(7) > div > div.CVdfjb.p5X8Ye > div:nth-child(2) > div > span > span > span.NtU4hc > svg") != null
       ||document.querySelector(
-        "#ow3 > div.T4LgNb > div > div:nth-child(7) > div.crqnQb > div.pHsCke > div.Jrb8ue > div > div.NzPR9b > span > div.MQKmmc.SudKRc.L7osyb.wYNW7d > span:nth-child(1)") != null) {
+        "#ow3 > div.T4LgNb > div > div:nth-child(8) > div.crqnQb > div.rG0ybd.LCXT6 > div.f0WtFf > div.M5zXed > div > span > span") != null) {
       googleMeetCall = 1;
       room = window.location.href;
       console.log(room);
